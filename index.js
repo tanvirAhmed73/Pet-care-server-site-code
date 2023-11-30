@@ -317,7 +317,7 @@ async function run() {
     app.get('/create-payment/:id', async (req, res) => {
       const id = req.params.id;
       const query = { _id: new ObjectId(id) }
-      const result = await paymentCollections.findOne(query);
+      const result = await paymentCollection.findOne(query);
       res.send(result);
     })
 
